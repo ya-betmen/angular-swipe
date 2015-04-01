@@ -163,7 +163,7 @@
             if (validSwipe(coords)) {
               scope.$apply(function() {
                 element.triggerHandler(eventName);
-                swipeHandler(scope, { $event: event });
+                swipeHandler(scope, { $event: event, $coords: {start: startCoords, end: coords}});
               });
             }
           }
